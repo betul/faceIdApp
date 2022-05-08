@@ -5,35 +5,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>FaceID App</title>
-
-  <script defer src="./face-api.min.js"></script>
-  <script defer src="app.js"></script>
-
-  <style>
-   body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      canvas {
-        position: absolute;
-      }
-
-
-  </style>
+  <title>FaceID Login </title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/face-api.min.js"></script>
+  <script defer src="assets/js/app.js"></script>
 </head>
 
 <body>
-  <!-- <video id="video" width="720" height="540" autoplay muted></video> -->
-  <div>
-    <input type="file" id="image" />
+  <div class="container" id="appContainer">
+    <div class="video-container" id="videoContainer">
+      <video id="video" width="400" height="300" autoplay muted></video>
+      <span id="faceIDResult"></span>
+    </div>
+    <!-- Login Container -->
+    <div class="login-container face-id-active" id="loginContainer">
+      <div class="form-item w-100">
+        <input type="text" placeholder="Kullanıcı Adı"/>
+      </div>
+      <div class="form-item w-100">
+        <input type="password" placeholder="Şifre"/>
+      </div>
+      <div class="button-container w-100">
+        <a href="about.html" class="btn" id="loginButton">
+          <span>Login</span>
+        </a>
+        <button id="faceIdButton">
+          <span id="face-id-button-text">Use FaceID</span>
+        </button>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <span>FaceID Login</span>
+    </div>
   </div>
 </body>
 
